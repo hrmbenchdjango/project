@@ -1,0 +1,40 @@
+{% extends "app/layout.html" %}
+
+{% block content %} 
+<br /><br />
+<h1>All Employee : </h1> <center><h2 style="color:brown">Group By Human Resouce Department</h2></center>
+<a href="{% url 'list' %}" class="btn btn-danger btn-large"><h4>Go Back To List &raquo;</h4></a>
+<a href="{% url 'department_list' %}" class="btn btn-warning btn-large"><h4>Testing Department &raquo;</h4></a>
+<a href="{% url 'human_department' %}" class="btn btn-primary btn-large"><h4>human Department &raquo;</h4></a>
+<br /><br /><center>
+<table width="800" border="2">
+    
+    <tr style="background-color:aquamarine;">
+
+        <td><strong>ID: </strong></td>
+        <td><strong>Name: </strong></td>
+        <td><strong>Last Name: </strong></td>
+        <td><strong>Department: </strong></td>
+        <td><strong>Age: </strong></td>
+        <td><strong>Birth Date: </strong></td>
+        <td><strong>Updated: </strong></td>
+
+    </tr>
+        {% for employee in Employee %}  
+        <tr>
+
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.lname}}</td>
+        <td>{{employee.department}}</td>
+        <td>{{employee.age}}</td>
+        <td>{{employee.birthdate}}</td>
+        <td>{{employee.updated}}</td>
+           
+    </tr>{%endfor%}
+</table></center> 
+
+{% endblock %}
+
+
+

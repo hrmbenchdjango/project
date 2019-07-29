@@ -1,0 +1,35 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<body><div calss="container">
+  <br /><br><center>
+<h2 style="color:#660033;">Response Entered by you:</h2></center>
+<div class="row" style="color:black;" >
+    <div class="col-sm">
+        &nbsp;
+      </div>
+    <div class="col-9" style="background-color: #FFFF99"> <br>
+<form method="post"><center>
+        <table width="300" style="background-color:azure;">
+    <th style="background-color:pink;"><h3> &nbsp;&nbsp;Your Data: </h3></th> <th style="background-color:pink;"> </th>
+        <tr>
+            
+         <td><h4>&nbsp;&nbsp;Name: </h4></td> <td><h4><strong>{{ name }}</strong></h4></td></tr>
+
+          <tr><td><h4> &nbsp;&nbsp;Last name: </h4><td><h4><strong>{{ lname }}</strong></h4></td> </td></tr>
+             
+           <tr>  <td><h4> &nbsp;&nbsp;Age:</h4></td><td><h4><strong>{{ age }}</strong></h4></td></tr>
+
+           <tr><td><h4>&nbsp;&nbsp; Birth Date:</h4></td> <td><h4><strong>{{ birthdate }}</strong></h4></td></tr>
+
+             <tr><td><h4> &nbsp;&nbsp;Department:</h4><td><strong><h4>{{ department }}</strong></h4></td></td>
+        
+        </tr>
+            <tr>                                                                    
+            </tr>
+         </table></center> <br /><br /><br />
+  <center><a href="{% url 'list' %}" class="btn btn-danger btn-large"><h2>Go to List &raquo;</h2></a> </center>
+</form><br /><br /></div><div class="col-sm">
+  </div></div></div> </body>
+
+{% endblock %}
